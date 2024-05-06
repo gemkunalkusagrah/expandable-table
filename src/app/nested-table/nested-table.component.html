@@ -1,0 +1,27 @@
+<table class="nested-table">
+  <tbody>
+    <ng-container *ngFor="let key of nestedKeys">
+      <tr>
+        <td class="level-key">
+          <span (click)="toggleRow(key)" *ngIf="isObject(data[key])" class="expand-icon">
+            <mat-icon>info</mat-icon>
+          </span>
+          {{ key }}
+        </td>
+        <td colspan="2" *ngIf="expandedRow === key && isObject(data[key])">
+          <ng-container>
+            <table class="nested-table child-table">
+              <tbody>
+                <tr>
+                  <td colspan="2">
+                    <app-nested-table [data]="data[key]"></app-nested-table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </ng-container>
+        </td>
+      </tr>
+    </ng-container>
+  </tbody>
+</table>

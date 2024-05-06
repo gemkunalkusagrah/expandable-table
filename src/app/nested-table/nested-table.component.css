@@ -1,0 +1,32 @@
+.nested-table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .nested-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  .level-key {
+    width: 50%;
+  }
+  
+  .expand-cell {
+    width: 50%;
+  }
+  
+  .expand-icon i {
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: font-size 0.2s ease-in-out;
+  }
+  
+  .expand-icon:hover i {
+    font-size: 1.5rem;
+  }
+  
+  .child-table {
+    width: 100%;
+  }
+  
